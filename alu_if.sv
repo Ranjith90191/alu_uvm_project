@@ -1,0 +1,27 @@
+`include "alu_defines.svh"
+interface alu_if(input logic clk);
+logic [`DW-1:0] OA;
+logic [`DW-1:0] OB;
+logic mode;
+logic cin;
+logic [`CW-1:0] cmd;
+logic rst;
+logic [1:0] inp_valid;
+
+logic [2*`DW-1:0]res;
+logic cout,oflow,G,L,E,err;
+
+clocking drv_cb@(posedge clk);
+    default input #1 output #1;
+    output OA,OB,mode,cmd,cin,rst,inp_valid;
+endclocking
+    
+clocking mon_cb@(posedge clk);
+    default input #1 output #1;
+    input OA,OB,mode,cmd,cin,rst,inp_valid,res,cout,oflow,G,L,E,err;
+endclocking
+
+modport DRV(clocking drv_cb);
+modport MON(clocking mon_cb);
+
+endinterface
