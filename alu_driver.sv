@@ -1,10 +1,10 @@
-class alu_driver extends uvm_driver #(alu_base_seq_item);
+class alu_driver extends uvm_driver #(alu_seq_item);
     `uvm_component_utils(alu_driver)
 
     virtual alu_if.DRV vif;
     bit item_outstanding;
 
-    function new(string name, uvm_component parent);
+    function new(string name="alu_driver", uvm_component parent);
         super.new(name, parent);
     endfunction
 

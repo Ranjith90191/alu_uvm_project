@@ -21,7 +21,7 @@ clocking mon_cb@(posedge clk);
     input OA,OB,mode,cmd,ce,cin,rst,inp_valid,res,cout,oflow,G,L,E,err;
 endclocking
 
-modport DRV(clocking drv_cb);
-modport MON(clocking mon_cb);
+modport DRV(clocking drv_cb,input rst);
+modport MON(clocking mon_cb,input rst);
 
 endinterface

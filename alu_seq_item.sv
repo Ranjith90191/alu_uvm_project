@@ -1,4 +1,4 @@
-class alu_base_seq_item extends uvm_sequence_item; ;
+class alu_seq_item extends uvm_sequence_item; ;
     //INPUTS
     rand bit [`DW-1:0] OA;
     rand bit [`DW-1:0] OB;
@@ -14,11 +14,11 @@ class alu_base_seq_item extends uvm_sequence_item; ;
 
     //constraint operation_const{cmd==0;mode==1;inp_valid==2'b11;} //Default
 
-    function new(string name = "alu_base_seq_item");
+    function new(string name = "alu_seq_item");
         super.new(name);
     endfunction
 
-    `uvm_object_utils_begin(alu_base_seq_item)
+    `uvm_object_utils_begin(alu_seq_item)
         `uvm_field_int(OA, UVM_ALL_ON)
         `uvm_field_int(OB, UVM_ALL_ON)
         `uvm_field_int(mode, UVM_ALL_ON)
