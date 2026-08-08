@@ -5,7 +5,7 @@ logic [`DW-1:0] OB;
 logic mode;
 logic cin;
 logic [`CW-1:0] cmd;
-logic rst;
+logic rst,ce;
 logic [1:0] inp_valid;
 
 logic [2*`DW-1:0]res;
@@ -13,12 +13,12 @@ logic cout,oflow,G,L,E,err;
 
 clocking drv_cb@(posedge clk);
     default input #1 output #1;
-    output OA,OB,mode,cmd,cin,rst,inp_valid;
+    output OA,OB,mode,cmd,cin,rst,inp_valid,ce;
 endclocking
     
 clocking mon_cb@(posedge clk);
     default input #1 output #1;
-    input OA,OB,mode,cmd,cin,rst,inp_valid,res,cout,oflow,G,L,E,err;
+    input OA,OB,mode,cmd,ce,cin,rst,inp_valid,res,cout,oflow,G,L,E,err;
 endclocking
 
 modport DRV(clocking drv_cb);

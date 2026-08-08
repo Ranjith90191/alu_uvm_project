@@ -7,6 +7,7 @@ class alu_base_seq_item extends uvm_sequence_item; ;
     rand bit [`CW-1:0] cmd;
     rand bit rst;
     rand bit [1:0] inp_valid;
+    rand bit ce;//Tie CE to 1 deafault
     //OUTPUTS  
     logic [2*`DW-1:0] res;
     logic cout,oflow,G,L,E,err;
