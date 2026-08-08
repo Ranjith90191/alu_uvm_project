@@ -11,7 +11,7 @@ class alu_base_seq_item extends uvm_sequence_item; ;
     logic [2*`DW-1:0] res;
     logic cout,oflow,G,L,E,err;
 
-    constraint operation_const{cmd==0;mode==1;inp_valid==2'b11;} //Default
+    //constraint operation_const{cmd==0;mode==1;inp_valid==2'b11;} //Default
 
     function new(string name = "alu_base_seq_item");
         super.new(name);
