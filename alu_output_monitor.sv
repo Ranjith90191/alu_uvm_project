@@ -15,7 +15,7 @@ class alu_output_monitor extends uvm_monitor;
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     if (!uvm_config_db#(virtual alu_if)::get(this, "", "vif", vif)) begin
-      `uvm_fatal("ALU_MON", ("Virtual interface not set for: " + get_full_name() + ".vif"));
+      `uvm_fatal("ALU_MON", "Virtual interface not set ");
     end
   endfunction
 

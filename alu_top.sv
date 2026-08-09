@@ -1,8 +1,7 @@
 // ============================================================
 // alu_top.sv
 // ============================================================
-`timescale 1ns/1ps
-
+  `include "alu_defines.svh"
 module alu_top;
 
   import uvm_pkg::*;
@@ -16,9 +15,9 @@ module alu_top;
   alu_if vif_i (.clk(clk));
 
   initial begin
-    vif_i.rst = 1'b1;
-    repeat (5) @(posedge clk);
     vif_i.rst = 1'b0;
+    //repeat (5) @(posedge clk);
+    //vif_i.rst = 1'b0;
   end
 
   ALU_DESIGN #(

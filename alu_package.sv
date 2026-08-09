@@ -12,7 +12,7 @@ package alu_pkg;
   `include "alu_op.sv"
 
   `include "alu_seq_item.sv"
-  `include "alu_base_sequence.sv"
+  `include "alu_sequence.sv"
 
   `include "alu_sequencer.sv"
   `include "alu_driver.sv"
