@@ -12,7 +12,8 @@ package alu_pkg;
   `include "alu_op.sv"
 
   `include "alu_seq_item.sv"
-  `include "alu_sequence.sv"
+  
+  `include "alu_sequence.sv" 
 
   `include "alu_sequencer.sv"
   `include "alu_driver.sv"
@@ -27,6 +28,7 @@ package alu_pkg;
   `include "alu_scoreboard.sv"
 
   `include "alu_env.sv"
+  
   `include "alu_test.sv"
 
 endpackage

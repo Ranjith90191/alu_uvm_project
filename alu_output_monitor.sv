@@ -23,23 +23,27 @@ class alu_output_monitor extends uvm_monitor;
     alu_seq_item out_pkt;
     forever begin
       @(vif.mon_cb);
-      // was unguarded before -- kept sampling straight through reset
       if (vif.rst) begin
         wait (vif.rst == 1'b0);
         continue;
       end
       out_pkt = alu_seq_item::type_id::create("out_pkt");
-      out_pkt.res   = vif.mon_cb.res;    // was bare vif.res -- now via clocking block
+      
+      // Capture actual outputs
+      out_pkt.res   = vif.mon_cb.res;
       out_pkt.cout  = vif.mon_cb.cout;
       out_pkt.oflow = vif.mon_cb.oflow;
       out_pkt.G     = vif.mon_cb.G;
       out_pkt.L     = vif.mon_cb.L;
       out_pkt.E     = vif.mon_cb.E;
       out_pkt.err   = vif.mon_cb.err;
-      `uvm_info("MON", $sformatf(
-        "Output: res=%0d cout=%0d oflow=%0d G=%0d L=%0d E=%0d err=%0d",
-        out_pkt.res, out_pkt.cout, out_pkt.oflow, out_pkt.G, out_pkt.L, out_pkt.E, out_pkt.err),
-        UVM_LOW)
+      
+      // Capture the current inputs on the bus at this exact moment
+      out_pkt.OA    = vif.mon_cb.OA;
+      out_pkt.OB    = vif.mon_cb.OB;
+      out_pkt.cmd   = vif.mon_cb.cmd;
+      out_pkt.mode  = vif.mon_cb.mode;
+
       output_broadcaster.write(out_pkt);
     end
   endtask

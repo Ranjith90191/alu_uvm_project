@@ -9,15 +9,16 @@ class alu_seq_item extends uvm_sequence_item;
   rand bit           mode;
   rand bit           cin;
   rand bit [`CW-1:0] cmd;
-  rand bit           rst;   // vestigial -- alu_top owns reset directly now
+  rand bit           rst;   
   rand bit [1:0]     inp_valid;
   rand bit           ce;
 
   // OUTPUTS
   logic [2*`DW-1:0] res;
   logic cout, oflow, G, L, E, err;
-
-  //constraint operation_const{cmd==0;mode==1;inp_valid==2'b11;}
+  
+  // METADATA FOR REPORTING
+  time req_time;
 
   function new(string name = "alu_seq_item");
     super.new(name);

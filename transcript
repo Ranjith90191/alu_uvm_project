@@ -1,7 +1,6 @@
 # vsim -c alu_top "+UVM_TESTNAME=alu_base_test" 
-# Start time: 11:31:07 on Aug 09,2026
+# Start time: 21:51:05 on Aug 09,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: alu_top.sv(26): (vopt-2241) Connection width does not match width of port 'RES'. The port definition is at: alu_dut.sv(1).
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -47,66 +46,32 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test alu_base_test...
 # UVM_INFO alu_input_monitor.sv(60) @ 5: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=0, cmd=0, OA=0, OB=0, cin=0, inp_valid=0, ce=0
-# UVM_INFO alu_output_monitor.sv(42) @ 5: uvm_test_top.env.out_agent.out_mon [MON] Output: res=0 cout=0 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_output_monitor.sv(42) @ 15: uvm_test_top.env.out_agent.out_mon [MON] Output: res=0 cout=0 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_input_monitor.sv(60) @ 15: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=ee, OB=3c, cin=0, inp_valid=11, ce=1
-# UVM_INFO alu_input_monitor.sv(60) @ 25: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=b4, OB=bf, cin=1, inp_valid=11, ce=1
-# UVM_INFO alu_output_monitor.sv(42) @ 25: uvm_test_top.env.out_agent.out_mon [MON] Output: res=0 cout=0 oflow=0 G=0 L=0 E=0 err=0
-# UVM_ERROR alu_scoreboard.sv(82) @ 25: uvm_test_top.env.scb [SCB] MISMATCH
-#   expected: res=2a cout=1 oflow=0 G=0 L=0 E=0 err=0
-#   actual  : res=0 cout=0 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_output_monitor.sv(42) @ 35: uvm_test_top.env.out_agent.out_mon [MON] Output: res=298 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_input_monitor.sv(60) @ 35: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=85, OB=d2, cin=1, inp_valid=11, ce=1
-# UVM_ERROR alu_scoreboard.sv(82) @ 35: uvm_test_top.env.scb [SCB] MISMATCH
-#   expected: res=73 cout=1 oflow=0 G=0 L=0 E=0 err=0
-#   actual  : res=12a cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_input_monitor.sv(60) @ 45: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=ba, OB=de, cin=1, inp_valid=11, ce=1
-# UVM_INFO alu_output_monitor.sv(42) @ 45: uvm_test_top.env.out_agent.out_mon [MON] Output: res=371 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_ERROR alu_scoreboard.sv(82) @ 45: uvm_test_top.env.scb [SCB] MISMATCH
-#   expected: res=57 cout=1 oflow=0 G=0 L=0 E=0 err=0
-#   actual  : res=173 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_output_monitor.sv(42) @ 55: uvm_test_top.env.out_agent.out_mon [MON] Output: res=343 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_input_monitor.sv(60) @ 55: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=d2, OB=34, cin=0, inp_valid=11, ce=1
-# UVM_ERROR alu_scoreboard.sv(82) @ 55: uvm_test_top.env.scb [SCB] MISMATCH
-#   expected: res=98 cout=1 oflow=0 G=0 L=0 E=0 err=0
-#   actual  : res=157 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_input_monitor.sv(60) @ 65: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=10, OB=98, cin=1, inp_valid=11, ce=1
-# UVM_INFO alu_output_monitor.sv(42) @ 65: uvm_test_top.env.out_agent.out_mon [MON] Output: res=408 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_ERROR alu_scoreboard.sv(82) @ 65: uvm_test_top.env.scb [SCB] MISMATCH
-#   expected: res=6 cout=1 oflow=0 G=0 L=0 E=0 err=0
-#   actual  : res=198 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_output_monitor.sv(42) @ 75: uvm_test_top.env.out_agent.out_mon [MON] Output: res=262 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_input_monitor.sv(60) @ 75: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=95, OB=7d, cin=0, inp_valid=11, ce=1
-# UVM_ERROR alu_scoreboard.sv(82) @ 75: uvm_test_top.env.scb [SCB] MISMATCH
-#   expected: res=a8 cout=0 oflow=0 G=0 L=0 E=0 err=0
-#   actual  : res=106 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_input_monitor.sv(60) @ 85: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=62, OB=e9, cin=1, inp_valid=11, ce=1
-# UVM_INFO alu_output_monitor.sv(42) @ 85: uvm_test_top.env.out_agent.out_mon [MON] Output: res=168 cout=0 oflow=0 G=0 L=0 E=0 err=0
-# UVM_ERROR alu_scoreboard.sv(82) @ 85: uvm_test_top.env.scb [SCB] MISMATCH
-#   expected: res=12 cout=1 oflow=0 G=0 L=0 E=0 err=0
-#   actual  : res=a8 cout=0 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_output_monitor.sv(42) @ 95: uvm_test_top.env.out_agent.out_mon [MON] Output: res=274 cout=1 oflow=0 G=0 L=0 E=0 err=0
-# UVM_INFO alu_input_monitor.sv(60) @ 95: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=0, OA=b, OB=fd, cin=1, inp_valid=11, ce=1
-# UVM_ERROR alu_scoreboard.sv(82) @ 95: uvm_test_top.env.scb [SCB] MISMATCH
-#   expected: res=4b cout=1 oflow=0 G=0 L=0 E=0 err=0
-#   actual  : res=112 cout=1 oflow=0 G=0 L=0 E=0 err=0
+# UVM_INFO alu_input_monitor.sv(60) @ 15: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=45, OB=86, cin=1, inp_valid=11, ce=1
+# UVM_INFO alu_input_monitor.sv(60) @ 25: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=23, OB=be, cin=0, inp_valid=11, ce=1
+# UVM_INFO alu_input_monitor.sv(60) @ 35: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=67, OB=62, cin=0, inp_valid=11, ce=1
+# UVM_INFO alu_input_monitor.sv(60) @ 45: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=64, OB=85, cin=1, inp_valid=11, ce=1
+# UVM_INFO alu_input_monitor.sv(60) @ 55: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=30, OB=6, cin=0, inp_valid=11, ce=1
+# UVM_INFO alu_input_monitor.sv(60) @ 65: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=33, OB=54, cin=0, inp_valid=11, ce=1
+# UVM_INFO alu_input_monitor.sv(60) @ 75: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=2e, OB=bb, cin=1, inp_valid=11, ce=1
+# UVM_INFO alu_input_monitor.sv(60) @ 85: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=df, OB=88, cin=1, inp_valid=11, ce=1
+# UVM_INFO alu_input_monitor.sv(60) @ 95: uvm_test_top.env.in_agent.in_mon [MON] Inputs: mode=1, cmd=9, OA=9d, OB=5b, cin=1, inp_valid=11, ce=1
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 95: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO alu_scoreboard.sv(88) @ 95: uvm_test_top.env.scb [SCB] SCOREBOARD SUMMARY: match=2 mismatch=8
+# UVM_INFO alu_scoreboard.sv(111) @ 95: uvm_test_top.env.scb [SCB] SCOREBOARD SUMMARY: match=6 mismatch=4 (Check scoreboard_report.txt for details)
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   25
+# UVM_INFO :   15
 # UVM_WARNING :    0
-# UVM_ERROR :    8
+# UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
-# [MON]    20
+# [MON]    10
 # [Questa UVM]     2
 # [RNTST]     1
-# [SCB]     9
+# [SCB]     1
 # [TEST_DONE]     1
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 95 ns  Iteration: 68  Instance: /alu_top
-# End time: 11:31:11 on Aug 09,2026, Elapsed time: 0:00:04
-# Errors: 0, Warnings: 1
+#    Time: 95 ns  Iteration: 69  Instance: /alu_top
+# End time: 21:51:10 on Aug 09,2026, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
